@@ -12,6 +12,6 @@ Q. 정적 타입 언어 vs 동적 타입 언어
 - [코틀린 우선 전략](KotlinFirstClass.md)
 - [코틀린 기초 문법 배우기](LearnTheKotlinProgrammingLanguage.md)
   - 변수, 타입추론, null safety, 조건문, 함수, 클래스, 상호운용성
-- [안드로이드에서 공통 코틀린 패턴 사용하기](../UseCommonKotlinPatternsWithAndroid.md)
+- [안드로이드에서 공통 코틀린 패턴 사용하기](UseCommonKotlinPatternsWithAndroid.md)
   - 
 
