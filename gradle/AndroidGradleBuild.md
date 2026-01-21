@@ -28,3 +28,24 @@
   - 어떤 프로젝트과 하위 프로젝트가 포함되었는지 확인.
   - 위의 빌드파일과 적용된 플러그인에 대한 classpath를 만듬(gradle은 JVM 에서 실행됨.)
   - settings 파일을 중심으로, 어떤 프로젝트들을 빌드할지와 플러그인, 라이브러리를 어디에서 가져올지를 정의.
+- Configuration
+  - 각 프로젝트의 태스크를 등록하고 빌드 파일을 실행
+- Execution
+  - Configuration의 결과로 모든 빌드 단계를 나타내는 Task의 DAG(Directed Acyclic Graph) 생성
+
+## [DSL 설정](https://developer.android.com/build/gradle-build-overview?utm_source=android-studio-app&utm_medium=app#configuration-dsls)
+- DLS은 선언형 으로 데이터에 specifying 초점을 둘 수 있게 해준다.
+- 각 블럭은 설정 함수와 속성들로 구성되어있다.
+
+## [외부 의존성](https://developer.android.com/build/gradle-build-overview?utm_source=android-studio-app&utm_medium=app#external-dependencies)
+- 메이븐 Artifacts는 group:artifact:version 으로 identity를 갖음.
+- 빌드 관리를 하는데 상당한 역할을 한 기능
+- 프로젝트를 작은 단위로 나눠 관리가 가능, 각 모듈을 isolating 함으로써 빌드 속도 향상을 가져올 수 있음.
+
+## [빌드 변수](https://developer.android.com/build/gradle-build-overview?utm_source=android-studio-app&utm_medium=app#build-variants)
+- build types과 product flavors로 구성
+- build type
+  - debug : 빠른 빌드, 디버깅 가능한 설정
+  - release: 코드 최소화, 보호, 실제 설치용
+- product flavors
+  - 데모, 풀버전, 무료 유료 등의 다양한 환경에 맞게 추가 가능
