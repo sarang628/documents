@@ -1,15 +1,15 @@
-### UI layer
+# [UI layer](https://developer.android.com/topic/architecture/ui-layer)
+- UI
+  - 애플리케이션 데이터를 화면에 표시
+  - 사용자와 상호작용의 주 시작점
+- Data Layer에서 받은 애플리케이션 데이터를 UI로 표시하는것이 효율적
+- 하지만 Data Layer에서 가져온 데이터 포맷을 바로 UI에 표시하기는 적절하지 않음
+- UI는 하나 이상의 data source의 데이터가 합쳐져야 하는 경우도 있음
+- UI Layer가 이 UI가 필요한 데이터의 파이프라인 역할을 함
 
-UI layer의 주요 기능은 다음과 같다.<br>
-1. 앱 데이터를 소비. UI가 쉽게 그릴 수 있는 데이터로 변환
-2. UI를 그릴 수 있는 데이터 소비. 사용자에게 보여줄 UI element에 대입.
-3. 사용자의 이벤트를 받아 데이터에 반영
+# [A basic case study](https://developer.android.com/topic/architecture/ui-layer#case-study)
+- udf 이론을 도입하는 예제를 보여줌
+- 문제들을 이론들이 어떻게 도움을 주는지 확인
 
-UI는 UI element + UI state로 구성<br>
-기존 UI 개발에는 UI element와 데이터가 하나의 클래스 안에서 함께 개발 했다면,<br>
-새로운 아키텍처는 이를 분리할 수 있도록 설계 되었다.
-
-화면에서 필요로 하는 '데이터를 세트'로 만들어 화면에 계속 호출하는 방식인데,<br>
-기존 방식에 이 '데이터 세트'를 적용하면 데이터가 바뀔때마다 모든 elements에 적용해야되서<br>
-render이 매우 느려질 수 있는데, 새로운 아키텍처에서는 데이터가 여러번 호출되도 성능상에<br>
-문제가 되지 않도록 만들었다.
+# [UI layer architecture](https://developer.android.com/topic/architecture/ui-layer#architecture)
+- UI는 activity, fragment와 같이 데이터를 표시하는 요소를 의미(View나 Compose와 같은 API와는 독립적임??)
