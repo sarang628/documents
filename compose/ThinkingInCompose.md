@@ -45,10 +45,24 @@
   - 공통 오브젝트에 속성을 작성하는 것
   - 뷰모델의 관측 가능한(observable) 변수를 변경하는 것
   - shared preference를 변경하는 것
-- [recomposition 시 가능한 많이 skip하기](https://developer.android.com/develop/ui/compose/mental-model?utm_source=android-studio-app&utm_medium=app#skips)
-- [주의: recomposition의 낙관적 수행]
+### [recomposition 시 가능한 많이 skip하기](https://developer.android.com/develop/ui/compose/mental-model?utm_source=android-studio-app&utm_medium=app#skips)
+### [주의: recomposition의 낙관적 수행](https://developer.android.com/develop/ui/compose/mental-model?utm_source=android-studio-app&utm_medium=app#optimistic)
   - recomposition에 파라미터가 변경되는 경우?
   - recomposition이 취소되고 다시 새로운 파라미터로 recomposition 수행
   - UI가 그려지는 곳에 사이드 이펙트가 의존한다면 recomposition이 취소 되더라도 해당 사이트 이펙트는 실행될 수 있음.
     - ex) 컴포즈 안에 Log를 그냥 호출 (여러번 호출될 수 있음)
     - Composable 본문에서는 사이드 이펙트를 직접 실행하면 안 됨
+### [composable 함수는 꽤 자주 실행될 수 있음](https://developer.android.com/develop/ui/compose/mental-model?utm_source=android-studio-app&utm_medium=app#frequent)
+  - UI 애니메이션의 매 프레임마다 실행 될 수 있음
+  - 기기 storage 읽기와 같은 비싼 수행은 Jank를 발생 가능
+  - 다른 쓰레드에서 수행 observable 데이터 타입을 사용하여 업데이트
+### [composable 함수는 병렬로 실행 할 수 있음](https://developer.android.com/develop/ui/compose/mental-model?utm_source=android-studio-app&utm_medium=app#parallel)
+  - 기본적으로는 수직이지만 멀티 쓰레드 사용 시 병렬이 될 수 있음
+  - 병렬 수행 시 낮은 우선순위의 화면에 없는 composable 함수가 실행될 수 있음
+  - composable 함수는 side-effects가 없어야 한다(should).
+  - 대신 UI thread에서 수행을 요청하는 onClick과 같은 triggered side effect 사용
+  - composable 다른 thread에 의해 호출 될 수 있다. composable 람다와 같은 곳에서
+  - 이런 composable 람다와 같은 곳에선 변수를 수정하지 않도록 한다. thread-safe 하지 않음.
+### [composable은 순서에 관계 없이 실행될 수 있음](https://developer.android.com/develop/ui/compose/mental-model?utm_source=android-studio-app&utm_medium=app#any-order)
+  - composable는 main thread에서 수행되지만, 안에서 수행은 multithreading로 하도록 설계
+  - 내부적으로 UI elements에 그리는 우선순위가 있기때문에 composable 안에서 다른 여러 composable를 호출하면 순서대로 실행 안됨. 
