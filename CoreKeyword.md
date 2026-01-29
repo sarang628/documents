@@ -18,3 +18,9 @@ side effect
   - UI의 일부인 Unit을 방출(emit)하는 함수이다.
   - 데이터를 받으면 UI를 화면에 표시해줌.
 - [Composable 함수 예](./compose/2_ThinkingInCompose.md)
+
+
+[DSL](https://en.wikipedia.org/wiki/Domain-specific_language)
+- 특정 애플리케이션 도메인에 특화된 언어
+- general-purpose language (GPL) 과 대조되는 개념
+- HTML과 같이 일부 소프트웨어에서 사용되는 언어
