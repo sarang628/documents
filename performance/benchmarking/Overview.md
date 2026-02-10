@@ -10,7 +10,7 @@
 - 테스트앱에 이벤트들을 주입, 결과를 모니터
 - 벤치마크 작성시 앱의 코드를 직접 호출하지 않고 사용자로서 앱을 사용
 
-## [Microbenchmark]
+## [Microbenchmark](https://developer.android.com/topic/performance/benchmarking/benchmarking-overview?utm_source=android-studio-app&utm_medium=app#microbenchmark)
 - 앱의 코드를 loop안에서 직접 밴치마크
   - CPU 작업을 측정하도록 설계
   - best-case 성능 평가 (warmed up JIT나 캐시에 접근하는 디스크 등)
