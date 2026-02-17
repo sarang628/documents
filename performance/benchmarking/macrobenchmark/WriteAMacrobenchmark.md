@@ -42,4 +42,9 @@ defaultConfig {
 ### [Create a macrobenchmark class](https://developer.android.com/topic/performance/benchmarking/macrobenchmark-overview?utm_source=android-studio-app&utm_medium=app#create-macrobenchmark)
 - MacrobenchmarkRule : JUnit4 룰로 Macrobenchmark 라이브러리에서 제공해줌
 - measureRepeated : 벤치마크 할 수 있는 다양한 옵션을 제공하는 함수
-- 
+  - package명, matrics, iterations을 설정
+
+## [Run the benchmark](https://developer.android.com/topic/performance/benchmarking/macrobenchmark-overview?utm_source=android-studio-app&utm_medium=app#run-benchmark)
+- API 14 이상 사용하기
+- 14 이전 버전에선 컴파일마다 편집중인 상태를 reset, 재설치를 요청
+- CompilationMode.Ignore 사용하여 제어앱에 편집 상태를 skip하거나 분리

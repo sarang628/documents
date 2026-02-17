@@ -20,3 +20,9 @@
 - macrobenchmark을 사용하는 baseline profile을 설치하면 사용자의 여정을 커버
 - profile 설정 후 도움이 되는지 확인을 위한 테스트 필요
 - Macrobenchmark 테스트를 작성, aseline Profile을 작성·수정하면서 테스트 결과를 확인
+- 안드로이드 스튜디오에서 @Test를 사용하는 함수 테스트 가능
+- the gutter action
+  - 라인 번호
+  - 브레이크포인트(● 빨간 점)
+  - 실행/테스트 아이콘
+- gradle 명령어로 일부 또는 전체 실행 가능
