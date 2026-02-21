@@ -28,4 +28,7 @@
   - observable UI state 소비하여 UI를 구현하는 방법
 
 ## [Define UI state](https://developer.android.com/topic/architecture/ui-layer#define-ui-state)
+- UI가 사용자가 보는 것 이라면, UI state는 사용자가 봐야하는 것을 앱이 말하는 것.
+- UI는 UIState를 시각화로 나타낸 것.
+- UIState 변경시 즉시 UI에 반영되어야 함.
 - 
