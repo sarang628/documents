@@ -1,9 +1,17 @@
 # [Lists and grids](https://developer.android.com/develop/ui/compose/lists)
-- Column은 보이지 않는 항목까지 모두 로드하기 때문에, 많은 항목들을 만들 때 성능상 좋지 않음
+- 항목들(items)의 모음(collection)을 표시
 - LazyColumn은 항목이 많아도 보이는 항목만 로드
 - LazyListScope를 제공하여, @Composable 컨튼츠 블록 파라미터를 받지않고 대신 composable가 emit하는 것을 바로 받음
-- LazyListScope는 리스트 항목을 작성하는 DLS를 제공
+- LazyListScope는 리스트 항목을 작성하는 DSL 제공
 - Lazy component는 레이아웃과 스크롤 위치에 따라 항목을 추가하는 역할을 함
+
+
+## [Lazy lists](https://developer.android.com/develop/ui/compose/lists?utm_source=android-studio-app&utm_medium=app#lazy)
+- 많은 항목들의 표시가 필요한 경우
+- Column은 보이지 않는 항목까지 모두 로드하기 때문에, 많은 항목들을 만들 때 성능상 좋지 않음
+- compose는 화면에서 보여져야만 하는 항목을만 표시하는 components들을 제공 LazyColumn 와 LazyRow 대표적
+- compose에서 제공하는 layout중 가장 특이한 레이아웃 중 하나
+- item 항목의 content를 describe 할 수 있는 LazyListScope block을 제공
 
 ## [LazyListScope DSL](https://developer.android.com/develop/ui/compose/lists#lazylistscope)
 - LazyListScope의 DSL은 항목을 만드는 여러 함수를 제공
