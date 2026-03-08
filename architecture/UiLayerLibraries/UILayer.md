@@ -31,4 +31,10 @@
 - UI가 사용자가 보는 것 이라면, UI state는 사용자가 봐야하는 것을 앱이 말하는 것.
 - UI는 UIState를 시각화로 나타낸 것.
 - UIState 변경시 즉시 UI에 반영되어야 함.
-- 
+
+### [Immutability](https://developer.android.com/topic/architecture/ui-layer?utm_source=android-studio-app&utm_medium=app#state-immutability)
+- UI state는 immutable 이다.
+- 특성 시점에 상태를 보장.
+- UI는 한가지 역할에만 충실 할 수 있음. UI는 UI state만 보고 반영하면 됨.
+- UI에서 UIstate를 바로 수정 불가. (UI에서 자체적으로 들고있는 상태는 수정 가능) 
+- 이를 위반시 source가 multiple하게 존재 데이터 inconsistencies로 버그를 유발한다.
