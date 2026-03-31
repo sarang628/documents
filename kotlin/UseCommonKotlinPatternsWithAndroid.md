@@ -17,8 +17,13 @@
 - 이를 적용하면 코드가 상당히 깔끔해진다
 
 ## [동반 객체(Companion objects)](https://developer.android.com/kotlin/common-patterns?_gl=1*1mfh22*_up*MQ..*_ga*MjA5MDI2ODYwNi4xNzY4NTQxNjEx*_ga_6HH9YJMN9M*czE3Njg1NDE2MTAkbzEkZzAkdDE3Njg1NDE2MTAkajYwJGwwJGgxMDQ0NDM4NjU3&utm_source=android-studio-app&utm_medium=app#companion)
-- 변수 또는 함수로 타입에 연결되있긴 하지만 특정 객체에 묶여있진 않음
+- 변수와 함수를 정의 제공
+- conceptually type에 연결 but 특정 객체에 묶여있진 않음<br>
+  (해당 객체는 모두 동일하게 사용 가능하다는 의미)
 - 자바의 static과 비슷함
+```
+변수의 예 : 사람의 나이는 변하지만, 눈의 갯수와 같이 모두가 동일하고 변치 않는 값은 companion으로 설정 
+```
 
 ## [위임 프로퍼티(Property delegation)](https://developer.android.com/kotlin/common-patterns?_gl=1*1mfh22*_up*MQ..*_ga*MjA5MDI2ODYwNi4xNzY4NTQxNjEx*_ga_6HH9YJMN9M*czE3Njg1NDE2MTAkbzEkZzAkdDE3Njg1NDE2MTAkajYwJGwwJGgxMDQ0NDM4NjU3&utm_source=android-studio-app&utm_medium=app#delegate)
 - 어떤 객체 초기화 시 같은 패턴이 긴 코드를 적용해야 하는 경우
